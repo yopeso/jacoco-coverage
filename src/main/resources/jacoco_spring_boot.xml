@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><!DOCTYPE report PUBLIC "-//JACOCO//DTD Report 1.0//EN"
+        "report.dtd">
+<report name="spring-boot-sample">
+    <sessioninfo id="Jareks-MBP-96dba76c" start="1506691403668" dump="1506691407736"/>
+    <sessioninfo id="Jareks-MBP-c48e0cf7" start="1506694837068" dump="1506694840239"/>
+    <sessioninfo id="Jareks-MBP-3f852cdb" start="1506695038093" dump="1506695041090"/>
+    <package name="com/yopeso/springbootsample">
+        <class name="com/yopeso/springbootsample/SpringBootSampleApplication">
+            <method name="&lt;init&gt;" desc="()V" line="7">
+                <counter type="INSTRUCTION" missed="0" covered="3"/>
+                <counter type="LINE" missed="0" covered="1"/>
+                <counter type="COMPLEXITY" missed="0" covered="1"/>
+                <counter type="METHOD" missed="0" covered="1"/>
+            </method>
+            <method name="main" desc="([Ljava/lang/String;)V" line="10">
+                <counter type="INSTRUCTION" missed="5" covered="0"/>
+                <counter type="LINE" missed="2" covered="0"/>
+                <counter type="COMPLEXITY" missed="1" covered="0"/>
+                <counter type="METHOD" missed="1" covered="0"/>
+            </method>
+            <method name="whatIsWrongWithYou" desc="()V" line="62">
+                <counter type="INSTRUCTION" missed="1" covered="0"/>
+                <counter type="LINE" missed="1" covered="0"/>
+                <counter type="COMPLEXITY" missed="1" covered="0"/>
+                <counter type="METHOD" missed="1" covered="0"/>
+            </method>
+            <counter type="INSTRUCTION" missed="6" covered="3"/>
+            <counter type="LINE" missed="3" covered="1"/>
+            <counter type="COMPLEXITY" missed="2" covered="1"/>
+            <counter type="METHOD" missed="2" covered="1"/>
+            <counter type="CLASS" missed="0" covered="1"/>
+        </class>
+        <sourcefile name="SpringBootSampleApplication.java">
+            <line nr="7" mi="0" ci="3" mb="0" cb="0"/>
+            <line nr="10" mi="4" ci="0" mb="0" cb="0"/>
+            <line nr="11" mi="1" ci="0" mb="0" cb="0"/>
+            <line nr="62" mi="1" ci="0" mb="0" cb="0"/>
+            <counter type="INSTRUCTION" missed="6" covered="3"/>
+            <counter type="LINE" missed="3" covered="1"/>
+            <counter type="COMPLEXITY" missed="2" covered="1"/>
+            <counter type="METHOD" missed="2" covered="1"/>
+            <counter type="CLASS" missed="0" covered="1"/>
+        </sourcefile>
+        <counter type="INSTRUCTION" missed="6" covered="3"/>
+        <counter type="LINE" missed="3" covered="1"/>
+        <counter type="COMPLEXITY" missed="2" covered="1"/>
+        <counter type="METHOD" missed="2" covered="1"/>
+        <counter type="CLASS" missed="0" covered="1"/>
+    </package>
+    <counter type="INSTRUCTION" missed="6" covered="3"/>
+    <counter type="LINE" missed="3" covered="1"/>
+    <counter type="COMPLEXITY" missed="2" covered="1"/>
+    <counter type="METHOD" missed="2" covered="1"/>
+    <counter type="CLASS" missed="0" covered="1"/>
+</report>
