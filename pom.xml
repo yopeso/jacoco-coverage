@@ -13,6 +13,10 @@
     <description>Tool for extracting value of instructions coverage from jacoco report</description>
     <url>https://github.com/yopeso/jacoco-coverage</url>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
