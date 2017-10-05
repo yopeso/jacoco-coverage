@@ -45,7 +45,7 @@ public class JacocoDomParser {
 
             document.getDocumentElement().normalize();
             //nodes for report
-            NodeList nodes = document.getElementsByTagName(REPORT_NAME).item(0).getChildNodes();
+            final NodeList nodes = document.getElementsByTagName(REPORT_NAME).item(0).getChildNodes();
             Node currentNode = null;
             Element currentElement = null;
             for (int i = 0; i < nodes.getLength(); i++) {

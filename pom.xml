@@ -7,17 +7,54 @@
     <groupId>com.yopeso</groupId>
     <artifactId>jacoco-coverage</artifactId>
     <version>0.1.0</version>
+    <packaging>jar</packaging>
+
+    <name>jacoco-coverage</name>
+    <description>Tool for extracting value of instructions coverage from jacoco report</description>
+    <url>https://github.com/yopeso/jacoco-coverage</url>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Jarek Blaszczyk</name>
+            <email>jaroslaw.blaszczyk@yopeso.com</email>
+            <organization>Yopeso</organization>
+            <organizationUrl>https://yopeso.com</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/yopeso/jacoco-coverage.git</connection>
+        <developerConnection>scm:git:ssh://github.com/yopeso/jacoco-coverage.git</developerConnection>
+        <url>https://github.com/yopeso/jacoco-coverage/tree/master</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
-    <packaging>jar</packaging>
-
-    <name>jacoco-coverage</name>
-    <description>Tool for extracting value of instructions coverage from jacoco report</description>
 
     <build>
         <plugins>
@@ -36,6 +73,53 @@
             </plugin>
         </plugins>
     </build>
-
-
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.0.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.0.0-M1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
