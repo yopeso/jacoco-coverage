@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yopeso</groupId>
-    <artifactId>jacoco-coverage</artifactId>
-    <version>0.1.0</version>
-    <packaging>jar</packaging>
+    <artifactId>jacococoverage-maven-plugin</artifactId>
+    <version>0.3.0-SNAPSHOT</version>
+    <packaging>maven-plugin</packaging>
 
-    <name>jacoco-coverage</name>
-    <description>Tool for extracting value of instructions coverage from jacoco report</description>
+    <name>jacococoverage-maven-plugin Maven Mojo</name>
+    <description>Maven plugin for extracting value of instructions coverage from jacoco report</description>
     <url>https://github.com/yopeso/jacoco-coverage</url>
 
     <properties>
@@ -53,6 +53,17 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugin-tools</groupId>
+            <artifactId>maven-plugin-annotations</artifactId>
+            <version>3.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
@@ -67,13 +78,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.yopeso.jacococoverage.MainApplication</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
+                <!--<configuration>-->
+                <!--<archive>-->
+                <!--<manifest>-->
+                <!--<mainClass>com.yopeso.jacococoverage.mavenplugin.MainApplication</mainClass>-->
+                <!--</manifest>-->
+                <!--</archive>-->
+                <!--</configuration>-->
             </plugin>
         </plugins>
     </build>

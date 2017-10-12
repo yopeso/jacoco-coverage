@@ -17,11 +17,11 @@ import java.io.File;
 
 public class JacocoDomParser {
     private static final String REPORT_NAME = "report";
-    public static final String COUNTER_NAME = "counter";
-    public static final String INSTRUCTION_NAME = "INSTRUCTION";
-    public static final String TYPE_NAME = "type";
-    public static final String COVERED_NAME = "covered";
-    public static final String MISSED_NAME = "missed";
+    private static final String COUNTER_NAME = "counter";
+    private static final String INSTRUCTION_NAME = "INSTRUCTION";
+    private static final String TYPE_NAME = "type";
+    private static final String COVERED_NAME = "covered";
+    private static final String MISSED_NAME = "missed";
 
     private File xmlFile;
     private DocumentBuilderFactory documentBuilderFactory;
