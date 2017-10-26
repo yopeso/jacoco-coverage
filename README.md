@@ -1,6 +1,7 @@
-# jacoco-coverage
+# jacoco-coverage maven plugin
 
-DOM Parser for jacoco report. Currently is implemented extracting of the total instructions coverage from xml report.
+Maven plugin that extracts the total instructions coverage from jacoco xml report and put the int result into file.
+*Mojo* class is used for define the plugin goal.
 
 ### The library is hosted on Maven Central:
 
@@ -8,22 +9,25 @@ DOM Parser for jacoco report. Currently is implemented extracting of the total i
 ```xml
 <dependency>
     <groupId>com.yopeso</groupId>
-    <artifactId>jacoco-coverage</artifactId>
-    <version>0.1.0</version>
+    <artifactId>jacococoverage-maven-plugin</artifactId>
+    <version>0.3.0</version>
 </dependency>
+```
+
+#### Gradle
+```groovy
+compile 'com.yopeso:jacococoverage-maven-plugin:0.3.0'
 ```
 
 ### How to use it:
 
-#### In the code
-
-```java
-JacocoDomParser jacocoParser = new JacocoDomParser("src/main/resources/jacoco_report.xml");
-int instructionsCoverage = jacocoParser.getInstructionCoverage();
-```
-
 #### Cmd
 
 ```shell
-java -jar target/jacoco-coverage-0.1.0.jar src/main/resources/jacoco_report.xml
+> mvn com.yopeso:jacococoverage-maven-plugin:0.3.0:coverage -Dcoverage.report=target/site/jacoco/jacoco.xml -Dcoverage.result=target/site/jacoco/coverage_result.txt
 ```
+
+
+*coverage:* the goal of the plugin defined in the *Mojo* class  
+*Dcoverage.report:* path of the jacoco xml report   
+*Dcoverage.result:* path of the file where will be written the jacoco coverage int number
