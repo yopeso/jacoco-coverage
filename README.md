@@ -38,7 +38,7 @@ int instructionsCoverage = jacocoParser.getInstructionCoverage();
 
 #### Gradle - using artifact jar end definig the task that executes it
 
-build.gradle - snippet
+*build.gradle* - snippet
 ```groovy
 ...
 apply plugin: 'jacoco'
