@@ -10,13 +10,13 @@ The int number is returned.
 <dependency>
     <groupId>com.yopeso</groupId>
     <artifactId>jacoco-coverage</artifactId>
-    <version>0.2.0</version>
+    <version>0.2.1</version>
 </dependency>
 ```
 
 #### Gradle
 ```groovy
-compile 'com.yopeso:jacoco-coverage:0.2.0'
+compile 'com.yopeso:jacoco-coverage:0.2.1'
 ```
 
 
@@ -32,8 +32,8 @@ int instructionsCoverage = jacocoParser.getInstructionCoverage();
 #### Cmd - copying jar artifact from Maven Central and execute
 
 ```shell
-> mvn dependency:copy -Dartifact=com.yopeso:jacoco-coverage:0.2.0:jar -DoutputDirectory=target
-> java -jar target/jacoco-coverage-0.2.0.jar jacoco_spring_boot.xml
+> mvn dependency:copy -Dartifact=com.yopeso:jacoco-coverage:0.2.1:jar -DoutputDirectory=target
+> java -jar target/jacoco-coverage-0.2.1.jar jacoco_spring_boot.xml
 ```
 
 #### Gradle - using artifact jar end definig the task that executes it
@@ -46,7 +46,7 @@ apply plugin: 'jacoco'
 dependencies {
 ...
 //extracting jacoco coverage - START
-    compile 'com.yopeso:jacoco-coverage:0.2.0'
+    compile 'com.yopeso:jacoco-coverage:0.2.1'
 }
  
 String jarPath
@@ -62,7 +62,7 @@ jacocoTestReport {
  
 task findJacocoCoverageJar {
     configurations.compile.each {
-        if ('jacoco-coverage-0.2.0.jar'.equals(it.getName())) {
+        if ('jacoco-coverage-0.2.1.jar'.equals(it.getName())) {
             jarPath = it.getAbsolutePath()
         }
     }
