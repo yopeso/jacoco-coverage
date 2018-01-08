@@ -3,27 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.yopeso</groupId>
     <artifactId>jacococoverage-maven-plugin</artifactId>
-    <version>0.3.0</version>
-    <packaging>maven-plugin</packaging>
-
+    <version>0.4.0</version>
+    <packaging>jar</packaging>
     <name>jacococoverage-maven-plugin Maven Mojo</name>
     <description>Maven plugin for extracting value of instructions coverage from jacoco report</description>
     <url>https://github.com/yopeso/jacoco-coverage</url>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
-
     <developers>
         <developer>
             <name>Jarek Blaszczyk</name>
@@ -32,13 +27,11 @@
             <organizationUrl>https://yopeso.com</organizationUrl>
         </developer>
     </developers>
-
     <scm>
         <connection>scm:git:git://github.com/yopeso/jacoco-coverage.git</connection>
         <developerConnection>scm:git:ssh://github.com/yopeso/jacoco-coverage.git</developerConnection>
-        <url>https://github.com/yopeso/jacoco-coverage/tree/master</url>
+        <url>https://github.com/yopeso/jacoco-coverage/tree/0.4.0-maven.plugin</url>
     </scm>
-
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -49,8 +42,6 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
-
     <dependencies>
         <dependency>
             <groupId>org.apache.maven</groupId>
@@ -70,24 +61,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <!-- Build an executable JAR -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
-                <!--<configuration>-->
-                <!--<archive>-->
-                <!--<manifest>-->
-                <!--<mainClass>com.yopeso.jacococoverage.mavenplugin.MainApplication</mainClass>-->
-                <!--</manifest>-->
-                <!--</archive>-->
-                <!--</configuration>-->
-            </plugin>
-        </plugins>
-    </build>
     <profiles>
         <profile>
             <id>release</id>
