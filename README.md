@@ -10,13 +10,13 @@ Maven plugin that extracts the total instructions coverage from jacoco xml repor
 <dependency>
     <groupId>com.yopeso</groupId>
     <artifactId>jacococoverage-maven-plugin</artifactId>
-    <version>0.4.0</version>
+    <version>0.4.1</version>
 </dependency>
 ```
 
 #### Gradle
 ```groovy
-compile 'com.yopeso:jacococoverage-maven-plugin:0.4.0'
+compile 'com.yopeso:jacococoverage-maven-plugin:0.4.1'
 ```
 
 ### How to use it:
@@ -24,7 +24,7 @@ compile 'com.yopeso:jacococoverage-maven-plugin:0.4.0'
 #### Cmd
 
 ```shell
-> mvn com.yopeso:jacococoverage-maven-plugin:0.4.0:coverage -Dcoverage.report=target/site/jacoco/jacoco.xml -Dcoverage.result=target/site/jacoco/coverage_result.txt
+> mvn com.yopeso:jacococoverage-maven-plugin:0.4.1:coverage -Dcoverage.report=target/site/jacoco/jacoco.xml -Dcoverage.result=target/site/jacoco/coverage_result.txt
 ```
 
 *coverage:* the goal of the plugin defined in the *Mojo* class  
