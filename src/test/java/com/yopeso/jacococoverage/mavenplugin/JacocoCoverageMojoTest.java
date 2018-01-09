@@ -12,12 +12,12 @@ import static org.junit.Assert.assertEquals;
 
 public class JacocoCoverageMojoTest {
     private JacocoCoverageMojo jacocoCoverageMojo;
-    private String xmlSpringBoot = "src/main/resources/jacoco_spring_boot.xml";
-    private String resultFilePath = "src/main/resources/result.txt";
+    private String xmlSpringBoot = "src/test/resources/jacoco_spring_boot.xml";
+    private String resultFilePath = "src/test/resources/result.txt";
     private int coverageForJacocoSpringBoot = 33;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         jacocoCoverageMojo = new JacocoCoverageMojo();
         jacocoCoverageMojo.setCoverageReport(xmlSpringBoot);
         jacocoCoverageMojo.setCoverageResult(resultFilePath);
@@ -27,7 +27,7 @@ public class JacocoCoverageMojoTest {
     public void execute() throws Exception {
         jacocoCoverageMojo.execute();
 
-        File resultFile;
+        File resultFile = null;
         FileReader fileReader;
         BufferedReader bR = null;
         int resultFromFile = -1;
@@ -41,6 +41,7 @@ public class JacocoCoverageMojoTest {
         } finally {
             if (bR != null) {
                 try {
+                    resultFile.deleteOnExit();
                     bR.close();
                 } catch (IOException e) {
                     System.out.println("Closing error.");
